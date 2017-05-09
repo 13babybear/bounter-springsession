@@ -18,8 +18,9 @@ public class AppController {
     }
 	
 	@RequestMapping("/put")
-    public void put(HttpSession session) {
+    public String put(HttpSession session) {
         session.setAttribute("name", "simon");
+        return "index";
     }
 	
 	@RequestMapping("/get")
